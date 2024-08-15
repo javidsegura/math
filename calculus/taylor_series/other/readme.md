@@ -8,3 +8,5 @@ Formula used: e^x = \sum_{i=0}^{\infty} \frac{x^i}{i!}
 
 
 ![alt text](image.png)
+
+Truly impressive how far one can get with the application of derivatives (approximating any function with Taylor's Theorem and minimizing/maximizing any concave function)
