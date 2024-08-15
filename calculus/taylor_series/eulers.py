@@ -38,6 +38,10 @@ class EulerNumber:
 temp = EulerNumber(500)
 print(temp.approximate(1)) #2.71821...
 
+"""
+Truly amazed by the power of derivatives...
+"""
+
 
 
 
