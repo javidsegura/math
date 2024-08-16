@@ -1,4 +1,6 @@
 
+import sys
+
 """
 
 Let's approximate eulers function (e^x) via a finite taylor series (taylor's polynimal) (more precisely,
@@ -12,7 +14,7 @@ import matplotlib.pyplot as plt
 
 
 
-class EulerNumber:
+class EulerNumberApprox:
       def __init__(self) -> None:
             """
             Params:
@@ -30,21 +32,17 @@ class EulerNumber:
 
             euler_value = 0
 
-            for i in range(high):
-
-                  euler_value += 1 * (((x)**i) / factorial(i))
+            for deriv in range(high):
+                  euler_value += 1 * (((x)**deriv) / factorial(deriv))
 
             return euler_value
       
       def compare_results(self, iters):
 
-            
                   results = {}
                   aprox_results = [dict() for i in range(iters)]
 
-
                   euler = e
-                  # This could be optimized
                   aprox_eulers = [self._approximate(1,i) for i in range(iters)]
                   
 
@@ -53,11 +51,10 @@ class EulerNumber:
                         for idx in range(iters):
                               aprox_results[idx][i] = aprox_eulers[idx] ** i
 
-                  
-
                   plt.plot(results.keys(), results.values(), label = f"e: 2.7182")
                   for i in range(iters):
                         plt.plot(aprox_results[i].keys(), aprox_results[i].values(), label = f"(iters: {i})approx e: {round(aprox_eulers[i],4)}")
+
 
                   plt.title("Approximated euler's number via Taylor's Theorem")
                   plt.xlabel("x")
