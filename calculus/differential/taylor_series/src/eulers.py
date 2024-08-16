@@ -68,7 +68,7 @@ class EulerNumberApprox:
 
 
 
-temp = EulerNumber()
+temp = EulerNumberApprox()
 
 temp.compare_results(8)
 
